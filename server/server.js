@@ -10,7 +10,6 @@ const server = createServer(async (req, res) => {
     const parsedUrl = parse(req.url, true)
     const { pathname = '', query } = parsedUrl
     const { method } = req
-    const ext = extname(pathname)
     const args = { method, pathname, req, res, query }
 
     if (method !== 'GET') {
